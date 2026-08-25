@@ -5,7 +5,7 @@
       "name": "Build Doc Configs",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/scripts/build_doc_configs.py",
+      "program": "${workspaceFolder}/tools/build_doc_configs.py",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "justMyCode": true

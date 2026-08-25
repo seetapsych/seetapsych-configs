@@ -9,7 +9,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = []
+dev = [
+    "build>=1.4.4",
+    "twine>=6.2.0",
+]
 
 [dependency-groups]
 dev = [
