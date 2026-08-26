@@ -1,25 +1,19 @@
 # These are placeholder URLs
 configs:
-  - name: face-selection-basic
-    version: 1.0.0
-    description: Basic face selection module using classical CV algorithms
-    download_url: https://raw.githubusercontent.com/SeetaPsych/seetapsych-configs/main/configs/face_selection_basic.yml
-    homepage: https://github.com/SeetaPsych/seetapsych-configs/tree/main/configs/face-selection-basic
+  - name: InsightFace' RetinaFace
+    version: 0.0.1
+    description: Face detection module powered by InsightFace's RetinaFace algorithm and models
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/insightface/retinaface.yml
+    homepage: https://github.com/seetapsych/seetapsych-face-hub
 
-  - name: face-selection-advanced
-    version: 1.2.0
-    description: Advanced face selection module with ONNX-based deep learning models
-    download_url: https://raw.githubusercontent.com/SeetaPsych/seetapsych-configs/main/configs/face_selection_advanced.yml
-    homepage: https://github.com/SeetaPsych/seetapsych-configs/tree/main/configs/face-selection-advanced
+  - name: InsightFace' ArcFace
+    version: 0.0.1
+    description: Face recognition module powered by InsightFace's ArcFace algorithm and models
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/insightface/arcface.yml
+    homepage: https://github.com/seetapsych/seetapsych-face-hub
 
-  - name: emotion-analysis-standard
-    version: 0.9.1
-    description: Standard emotion analysis from facial expressions
-    download_url: https://raw.githubusercontent.com/SeetaPsych/seetapsych-configs/main/configs/emotion_standard.yml
-    homepage: https://github.com/SeetaPsych/seetapsych-configs/tree/main/configs/emotion-analysis-standard
-
-  - name: body-pose-lite
-    version: 2.0.0
-    description: Lightweight body pose estimation module
-    download_url: https://raw.githubusercontent.com/SeetaPsych/seetapsych-configs/main/configs/body_pose_lite.yml
-    homepage: https://github.com/SeetaPsych/seetapsych-configs/tree/main/configs/body-pose-lite
+  - name: MediaPipe's FaceMesh
+    version: 0.0.1
+    description: Face mesh estimation module powered by MediaPipe's FaceMesh algorithm and models
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/mediapipe.yml
+    homepage: https://github.com/seetapsych/seetapsych-face-hub
