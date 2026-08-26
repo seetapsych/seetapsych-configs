@@ -4,6 +4,7 @@ description = "SeetaPsych Configs"
 readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ["version"]
+license = { file = "LICENSE" }
 dependencies = [
     "pyyaml>=6.0.3",
 ]
