@@ -68,14 +68,14 @@ configs:
   - name: HeadDetection (CoSI)
     version: 0.0.1
     description: Head detection module for CoSI gaze following estimation with YOLO-based detector and head selection
-    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-following/main/seetapsych_gaze_following/modules/head_detection.yml
-    homepage: https://github.com/seetapsych/seetapsych-gaze-following
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/head_detection.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-follow
 
-  - name: Gaze Following (CoSI)
+  - name: Gaze Follow (CoSI)
     version: 0.0.1
     description: CoSI model for gaze following estimation, provides gaze point and social gaze relation
-    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-following/main/seetapsych_gaze_following/modules/cosi.yml
-    homepage: https://github.com/seetapsych/seetapsych-gaze-following
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/cosi.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-follow
 
   - name: AdaChrom
     version: 0.0.1
