@@ -1,12 +1,11 @@
-# These are placeholder URLs
 configs:
-  - name: InsightFace' RetinaFace
+  - name: InsightFace's RetinaFace
     version: 0.0.1
     description: Face detection module powered by InsightFace's RetinaFace algorithm and models
     download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/insightface/retinaface.yml
     homepage: https://github.com/seetapsych/seetapsych-face-hub
 
-  - name: InsightFace' ArcFace
+  - name: InsightFace's ArcFace
     version: 0.0.1
     description: Face recognition module powered by InsightFace's ArcFace algorithm and models
     download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/insightface/arcface.yml
@@ -17,3 +16,69 @@ configs:
     description: Face mesh estimation module powered by MediaPipe's FaceMesh algorithm and models
     download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/mediapipe.yml
     homepage: https://github.com/seetapsych/seetapsych-face-hub
+
+  - name: RetinaFace (PyTorch)
+    version: 0.0.1
+    description: 'A PyTorch implementation of RetinaFace: Single-stage Dense Face Localisation in the Wild'
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/retinaface.yml
+    homepage: https://github.com/seetapsych/seetapsych-face-hub
+
+  - name: OpenGaze-AFFNet
+    version: 0.0.1
+    description: Gaze estimation module powered by OpenGaze's AFFNet algorithm
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/affnet.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze
+
+  - name: OpenGaze-ITrackerPlus
+    version: 0.0.1
+    description: Gaze estimation module powered by OpenGaze's ITrackerPlus algorithm
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/itracker-plus.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze
+
+  - name: OpenGaze-TdGazeNet
+    version: 0.0.1
+    description: Gaze estimation module powered by OpenGaze's TdGazeNet algorithm
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/tdgazenet.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze
+
+  - name: Emotions (UFANet)
+    version: 0.0.1
+    description: Unified Facial Affect Network for action units, expression and dimensional affect estimation
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-emo/main/seetapsych_emo/modules/ufanet.yml
+    homepage: https://github.com/seetapsych/seetapsych-emo
+
+  - name: TinyHR
+    version: 0.0.1
+    description: Estimate heart rate from camera/video continuous frames
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/tiny-hr.yml
+    homepage: https://github.com/seetapsych/seetapsych-hertz
+
+  - name: SeetaHeartRateDetector
+    version: 0.0.1
+    description: Estimate heart rate from camera/video continuous frames using dense landmarks
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/seeta.yml
+    homepage: https://github.com/seetapsych/seetapsych-hertz
+
+  - name: SeetaDenseLandmarks
+    version: 0.0.1
+    description: Detect dense landmarks from face bounding box or facial landmarks
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-face-ex/main/seetapsych_face_ex/modules/dense_landmarks.yml
+    homepage: https://github.com/seetapsych/seetapsych-face-ex
+
+  - name: HeadDetection (CoSI)
+    version: 0.0.1
+    description: Head detection module for CoSI gaze following estimation with YOLO-based detector and head selection
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-following/main/seetapsych_gaze_following/modules/head_detection.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-following
+
+  - name: Gaze Following (CoSI)
+    version: 0.0.1
+    description: CoSI model for gaze following estimation, provides gaze point and social gaze relation
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-following/main/seetapsych_gaze_following/modules/cosi.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-following
+
+  - name: AdaChrom
+    version: 0.0.1
+    description: Estimate heart rate from camera/video continuous frames using adaptive chrominance method
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/ada-chrom.yml
+    homepage: https://github.com/seetapsych/seetapsych-hertz
