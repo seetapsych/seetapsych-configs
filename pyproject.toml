@@ -9,6 +9,11 @@ dependencies = [
     "pyyaml>=6.0.3",
 ]
 
+[project.urls]
+Homepage = "https://github.com/seetapsych/seetapsych-configs"
+Repository = "https://github.com/seetapsych/seetapsych-configs"
+Issues = "https://github.com/seetapsych/seetapsych-configs/issues"
+
 [project.optional-dependencies]
 dev = [
     "build>=1.4.4",
