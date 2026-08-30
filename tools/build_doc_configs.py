@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import os
 import sys
 from datetime import datetime
 
 from seetapsych_configs import ConfigInfo, configs
-
 
 TEMPLATE_NAME = 'template_doc_configs.md'
 OUTPUT_NAME = 'CONFIGS.md'
@@ -16,11 +13,7 @@ SLOT_GENERATED_AT = '{{GENERATED_AT}}'
 
 
 def _escape_md(text: str) -> str:
-    return (
-        text.replace('|', '\\|')
-            .replace('\n', ' ')
-            .strip()
-    )
+    return text.replace('|', '\\|').replace('\n', ' ').strip()
 
 
 def _homepage_cell(cfg: ConfigInfo) -> str:
@@ -51,14 +44,13 @@ def render_table(cfgs: list[ConfigInfo]) -> str:
 
 def load_template(scripts_dir: str) -> str:
     tpl_path = os.path.join(scripts_dir, TEMPLATE_NAME)
-    with open(tpl_path, 'r', encoding='utf-8') as f:
+    with open(tpl_path, encoding='utf-8') as f:
         return f.read()
 
 
 def render_md(cfgs: list[ConfigInfo], template: str) -> str:
     return (
-        template
-        .replace(SLOT_TABLE, render_table(cfgs))
+        template.replace(SLOT_TABLE, render_table(cfgs))
         .replace(SLOT_COUNT, str(len(cfgs)))
         .replace(SLOT_GENERATED_AT, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     )
