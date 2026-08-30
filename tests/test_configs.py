@@ -7,6 +7,11 @@ import yaml
 from seetapsych_configs import ConfigInfo, __version__, configs
 
 
+def test_version() -> None:
+    assert isinstance(__version__, str)
+    assert len(__version__) > 0
+
+
 def _raw_configs_path() -> str:
     return os.path.join(
         os.path.dirname(os.path.dirname(__file__)),
@@ -25,10 +30,6 @@ def _load_raw_configs() -> list[dict[str, Any]]:
 
 
 class TestModuleBasics:
-    def test_version_is_string(self) -> None:
-        assert isinstance(__version__, str)
-        assert len(__version__) > 0
-
     def test_configs_is_list_of_configinfo(self) -> None:
         assert isinstance(configs, list)
         for cfg in configs:
