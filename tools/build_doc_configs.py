@@ -16,6 +16,18 @@ def _escape_md(text: str) -> str:
     return text.replace("|", "\\|").replace("\n", " ").strip()
 
 
+def _format_attrs(provides: list[str]) -> str:
+    return ", ".join(f"`{p}`" for p in provides) if provides else "—"
+
+
+def _packages_cell(cfg: ConfigInfo) -> str:
+    packages = cfg.get("packages") or []
+    if not packages:
+        return "—"
+    items = [f"- **{pkg['name']}**: {_format_attrs(pkg.get('provides', []))}" for pkg in packages]
+    return "<br>".join(items)
+
+
 def _homepage_cell(cfg: ConfigInfo) -> str:
     return f"[Homepage]({cfg['homepage']})" if cfg["homepage"] else "-"
 
@@ -25,16 +37,42 @@ def _download_cell(cfg: ConfigInfo) -> str:
 
 
 def render_table(cfgs: list[ConfigInfo]) -> str:
+    active = [c for c in cfgs if not c.get("disabled", False)]
+    disabled = [c for c in cfgs if c.get("disabled", False)]
+
     lines: list[str] = [
-        "| Name | Version | Description | Download | Homepage |",
-        "| --- | --- | --- | --- | --- |",
+        "| Name | Version | Description | Packages | Download | Homepage |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
-    for cfg in cfgs:
+    for cfg in active:
         lines.append(
-            "| {name} | {version} | {desc} | {dl} | {hp} |".format(
+            "| {name} | {version} | {desc} | {pkgs} | {dl} | {hp} |".format(
                 name=_escape_md(cfg["name"]),
                 version=_escape_md(cfg["version"]),
                 desc=_escape_md(cfg["description"]),
+                pkgs=_packages_cell(cfg),
+                dl=_download_cell(cfg),
+                hp=_homepage_cell(cfg),
+            )
+        )
+    if not disabled:
+        return "\n".join(lines)
+
+    lines.append("")
+    lines.append(
+        f"> **Deprecated configs ({len(disabled)}):** "
+        "reserved for historical reference; download is skipped by default."
+    )
+    lines.append("")
+    lines.append("| Name | Version | Description | Packages | Download | Homepage |")
+    lines.append("| --- | --- | --- | --- | --- | --- |")
+    for cfg in disabled:
+        lines.append(
+            "| {name} | {version} | {desc} | {pkgs} | {dl} | {hp} |".format(
+                name=f"~~{_escape_md(cfg['name'])}~~",
+                version=f"~~{_escape_md(cfg['version'])}~~",
+                desc=f"~~{_escape_md(cfg['description'])}~~",
+                pkgs=f"~~{_packages_cell(cfg)}~~",
                 dl=_download_cell(cfg),
                 hp=_homepage_cell(cfg),
             )
@@ -68,7 +106,8 @@ def main() -> int:
         f.write(content)
 
     rel = os.path.relpath(output_path, os.getcwd())
-    print(f"Wrote {len(configs)} config entries -> {rel}")
+    total_pkgs = sum(len(c.get("packages") or []) for c in configs)
+    print(f"Wrote {len(configs)} config entries ({total_pkgs} packages total) -> {rel}")
     return 0
 
 
