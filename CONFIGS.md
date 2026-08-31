@@ -2,8 +2,8 @@
 
 This document collects all default recommended integrated modules for `seetapsych-lib`.
 
-- **Total configs**: 15
-- **Generated at**: 2026-08-31 20:03:01
+- **Total configs**: 12
+- **Generated at**: 2026-08-31 23:16:57
 - **How to install**: Run `seetapsych-manager download`
   (or `python -m seetapsych_lib.manager download`)
   to fetch and install every module into the default config directory.
@@ -20,15 +20,7 @@ This document collects all default recommended integrated modules for `seetapsyc
 | Emotions (SeetaEmoNet) | 1.0 | Multi-task facial affect estimation covering action units, categorical expressions, and continuous valence-arousal dimensions. | - **Emotions-SeetaEmoNet**: `face/action_units`, `face/expression`, `face/dimensional_affect` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-emo/main/seetapsych_emo/modules/emonet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-emo) |
 | AdaChrom | 1.0 | Model-free rPPG heart rate estimation using adaptive chrominance analysis on skin ROI. | - **HeartRate-AdaChrom**: `face/heart_rate` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/ada-chrom.yml) | [Homepage](https://github.com/seetapsych/seetapsych-hertz) |
 | TinyHR | 1.0 | Lightweight neural network for fast heart rate estimation directly from face video frames. | - **HeartRate-TinyHR**: `face/heart_rate` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/tiny-hr.yml) | [Homepage](https://github.com/seetapsych/seetapsych-hertz) |
-| OpenGaze-AFFNet | 1.0 | Open-source AFFNet attention-fusion screen-gaze estimation outputting one shared gaze vector applied to both eyes. | - **GazeScreen-AFFNet(OpenGaze)**: `face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/affnet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze) |
-| OpenGaze-ITrackerPlus | 1.0 | Open-source lightweight ITrackerPlus screen-gaze estimation outputting one shared gaze vector applied to both eyes. | - **GazeScreen-ITrackerPlus(OpenGaze)**: `face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/itracker-plus.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze) |
-| OpenGaze-TdGazeNet | 1.0 | Open-source TdGazeNet high-accuracy screen-gaze estimation with 3D face prior, outputting distinct per-eye gaze vectors. | - **GazeScreen-TDGazeNet(OpenGaze)**: `face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze/modules/tdgazenet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze) |
+| OpenGaze-AFFNet | 1.0 | Open-source AFFNet attention-fusion screen-gaze estimation outputting one shared gaze vector applied to both eyes. | - **GazeScreen-AFFNet(OpenGaze)**: `face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze_screen/modules/affnet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze) |
+| OpenGaze-TdGazeNet | 1.0 | Open-source TdGazeNet high-accuracy screen-gaze estimation with 3D face prior, outputting distinct per-eye gaze vectors. | - **GazeScreen-TDGazeNet(OpenGaze)**: `face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze_screen/modules/tdgazenet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze) |
 | HeadDetection & HeadSelection (CoSI Gaze Follow) | 1.0 | Ultralytics YOLO-based multi-person head detector plus pluggable selection and sorting post-process, serving as the front-end for CoSI gaze-following models. | - **HeadDetection-CoSIGaze**: `head/detection`<br>- **HeadSelection**: `head/selection`, `head/detection` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/head_detection.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze-follow) |
 | Gaze Follow (CoSI Transformer) | 1.0 | Confidence-coordinated Spatial Integration (CoSI) transformer for multi-person gaze following and dyadic social-gaze relation classification. | - **SceneGazeFollow-CoSIGaze**: `head/gaze_point`<br>- **SocialGaze-CoSIGaze**: `head/social_gaze` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/cosi.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze-follow) |
-
-> **Deprecated configs (2):** reserved for historical reference; download is skipped by default.
-
-| Name | Version | Description | Packages | Download | Homepage |
-| --- | --- | --- | --- | --- | --- |
-| ~~RetinaFace (PyTorch)~~ | ~~1.0~~ | ~~Single-stage RetinaFace for face bounding box and 5-point landmark detection with MobileNet and ResNet-50 backbones.~~ | ~~- **FaceDetection-RetinaFace(PyTorch)**: `face/detection`, `face/landmarks`~~ | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-face-hub/main/seetapsych_face_hub/modules/retinaface.yml) | [Homepage](https://github.com/seetapsych/seetapsych-face-hub) |
-| ~~SeetaHeartRateDetector~~ | ~~1.0~~ | ~~Traditional signal-processing heart rate estimation from forehead skin pixels via chrominance and FFT analysis.~~ | ~~- **HeartRate-Seeta**: `face/heart_rate`~~ | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-hertz/main/seetapsych_hertz/modules/seeta.yml) | [Homepage](https://github.com/seetapsych/seetapsych-hertz) |
