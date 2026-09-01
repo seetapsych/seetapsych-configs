@@ -25,14 +25,10 @@ seetapsych-manager download -f
 To pull in the latest module definitions, first upgrade the package itself, then re-download the configs:
 
 ```sh
-uv pip compile --upgrade-package seetapsych-configs
-seetapsych-manager download -f
-```
-
-If you are using pip instead of uv:
-
-```sh
-pip install --upgrade seetapsych-configs
+# Upgrade the installed seetapsych-configs package to the latest available version
+# For plain pip: pip install --upgrade seetapsych-configs
+uv pip install --upgrade seetapsych-configs
+# Re-download the latest module definitions
 seetapsych-manager download -f
 ```
 
