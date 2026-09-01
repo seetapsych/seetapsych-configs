@@ -1,13 +1,4 @@
 configs:
-  - name: SelectFace
-    version: "1.0"
-    description: Select one target face from multi-face detections for single-face downstream pipelines.
-    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-lib/main/seetapsych_lib/modules/face_selection.yml
-    homepage: https://github.com/seetapsych/seetapsych-lib
-    packages:
-      - name: SelectFace
-        provides: [face/selection, face/detection]
-
   - name: InsightFace's RetinaFace
     version: "1.0"
     description: InsightFace Buffalo RetinaFace detector with face bounding box and 5-point landmark detection featuring 500M / 2.5G / 10G FLOPs model variants.
@@ -76,8 +67,8 @@ configs:
   - name: OpenGaze-AFFNet
     version: "1.0"
     description: Open-source AFFNet attention-fusion screen-gaze estimation outputting one shared gaze vector applied to both eyes.
-    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze_screen/modules/affnet.yml
-    homepage: https://github.com/seetapsych/seetapsych-gaze
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-screen/main/seetapsych_gaze_screen/modules/affnet.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-screen
     packages:
       - name: GazeScreen-AFFNet(OpenGaze)
         provides: [face/gaze_screen]
@@ -85,8 +76,8 @@ configs:
   - name: OpenGaze-TdGazeNet
     version: "1.0"
     description: Open-source TdGazeNet high-accuracy screen-gaze estimation with 3D face prior, outputting distinct per-eye gaze vectors.
-    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze/main/seetapsych_gaze_screen/modules/tdgazenet.yml
-    homepage: https://github.com/seetapsych/seetapsych-gaze
+    download_url: https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-screen/main/seetapsych_gaze_screen/modules/tdgazenet.yml
+    homepage: https://github.com/seetapsych/seetapsych-gaze-screen
     packages:
       - name: GazeScreen-TDGazeNet(OpenGaze)
         provides: [face/gaze_screen]
