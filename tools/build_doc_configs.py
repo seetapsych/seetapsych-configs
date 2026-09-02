@@ -16,15 +16,24 @@ def _escape_md(text: str) -> str:
     return text.replace("|", "\\|").replace("\n", " ").strip()
 
 
-def _format_attrs(provides: list[str]) -> str:
-    return ", ".join(f"`{p}`" for p in provides) if provides else "—"
+def _format_attributes(provides: list[str]) -> str:
+    if not provides:
+        return ""
+    return "<br>".join(f"&nbsp;&nbsp;`{p}`" for p in provides)
 
 
 def _packages_cell(cfg: ConfigInfo) -> str:
     packages = cfg.get("packages") or []
     if not packages:
         return "—"
-    items = [f"- **{pkg['name']}**: {_format_attrs(pkg.get('provides', []))}" for pkg in packages]
+    items: list[str] = []
+    for pkg in packages:
+        segments = pkg["name"].split("-")
+        joined = "**<br>**-".join(segments)
+        name_md = f"**{joined}**"
+        attrs = _format_attributes(pkg.get("provides", []))
+        suffix = f"<br>{attrs}" if attrs else ""
+        items.append(f"{name_md}:{suffix}")
     return "<br>".join(items)
 
 
