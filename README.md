@@ -2,7 +2,7 @@
 
 Official recommended configuration files for SeetaPsych.
 
-For the full list of distributed configs with download links and homepages, see [CONFIGS.md](CONFIGS.md).
+For the full list of distributed configs with download links and homepages, see [CONFIGS.md](https://github.com/seetapsych/seetapsych-configs/blob/main/CONFIGS.md).
 
 ## Install via Manager
 
@@ -53,4 +53,4 @@ There are two ways to install dependencies:
 
 The WebUI also triggers on-demand dependency installation automatically when a module is first used.
 
-A catalog of the distributed module configs is available in [CONFIGS.md](CONFIGS.md).
+A catalog of the distributed module configs is available in [CONFIGS.md](https://github.com/seetapsych/seetapsych-configs/blob/main/CONFIGS.md).
