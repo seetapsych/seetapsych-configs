@@ -11,3 +11,7 @@ This document collects all default recommended integrated modules for `seetapsyc
 ## Configs
 
 {{CONFIGS_TABLE}}
+
+---
+
+<sub><em><span style="color:var(--fgColor-danger, #cf222e);">\*</span> Auto-generated. Do not edit directly. Source: [`tools/build_doc_configs.py`](tools/build_doc_configs.py)</em></sub>

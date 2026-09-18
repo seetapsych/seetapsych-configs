@@ -3,7 +3,7 @@
 This document collects all default recommended integrated modules for `seetapsych-lib`.
 
 - **Total configs**: 11
-- **Generated at**: 2026-09-03 03:40:25
+- **Generated at**: 2026-09-18 14:37:19
 - **How to install**: Run `seetapsych-manager download`
   (or `python -m seetapsych_lib.manager download`)
   to fetch and install every module into the default config directory.
@@ -23,3 +23,7 @@ This document collects all default recommended integrated modules for `seetapsyc
 | OpenGaze-TdGazeNet | 1.0 | Open-source TdGazeNet high-accuracy screen-gaze estimation with 3D face prior, outputting distinct per-eye gaze vectors. | **GazeScreen**<br>**-TDGazeNet(OpenGaze)**:<br>&nbsp;&nbsp;`face/gaze_screen` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-screen/main/seetapsych_gaze_screen/modules/tdgazenet.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze-screen) |
 | HeadDetection & HeadSelection (CoSI Gaze Follow) | 1.0 | Ultralytics YOLO-based multi-person head detector plus pluggable selection and sorting post-process, serving as the front-end for CoSI gaze-following models. | **HeadDetection**<br>**-CoSIGaze**:<br>&nbsp;&nbsp;`head/detection`<br>**HeadSelection**:<br>&nbsp;&nbsp;`head/selection`<br>&nbsp;&nbsp;`head/detection` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/head_detection.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze-follow) |
 | Gaze Follow (CoSI Transformer) | 1.0 | Confidence-coordinated Spatial Integration (CoSI) transformer for multi-person gaze following and dyadic social-gaze relation classification. | **SceneGazeFollow**<br>**-CoSIGaze**:<br>&nbsp;&nbsp;`head/gaze_point`<br>**SocialGaze**<br>**-CoSIGaze**:<br>&nbsp;&nbsp;`head/social_gaze` | [Download](https://raw.githubusercontent.com/seetapsych/seetapsych-gaze-follow/main/seetapsych_gaze_follow/modules/cosi.yml) | [Homepage](https://github.com/seetapsych/seetapsych-gaze-follow) |
+
+---
+
+<sub><em><span style="color:var(--fgColor-danger, #cf222e);">\*</span> Auto-generated. Do not edit directly. Source: [`tools/build_doc_configs.py`](tools/build_doc_configs.py)</em></sub>
